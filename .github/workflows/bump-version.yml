@@ -1,4 +1,4 @@
-name: Run tests
+name: Sync version with Lucide
 on:
   pull_request:
     types: [opened]
