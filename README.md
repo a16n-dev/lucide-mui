@@ -3,7 +3,7 @@
 </p>
 
 # Lucide Icons for MUI
-This package provides [Lucide icons](https://lucide.dev/) as react components designed for use with [Material UI](https://mui.com/material-ui/), so that they can be used in the same way icons from `@mui/icons-material` are used.
+This package provides [Lucide icons](https://lucide.dev/) as React components designed for use with [Material UI](https://mui.com/material-ui/), so that they can be used in the same way icons from `@mui/icons-material` are used.
 
 ## Installation
 You can use either npm or yarn:
@@ -39,4 +39,11 @@ They also support all props of the [`SvgIcon` Material UI component](https://mui
 ```
 
 ## Versioning
-This package follows the versioning of Lucide icons
+We aim to keep the version in line with the corresponding version of `lucide`
+
+## FAQs
+### Whats the difference between this and lucide-react?
+Lucide-react provides React components, however these components don't integrate seamlessly with Material UI, requiring extra work to use them in place of material icons.
+
+### What icons are available?
+All lucide icons are available, and this package will be updated whenever new icons are added to lucide. This package is not intended to add any additional or custom icons
