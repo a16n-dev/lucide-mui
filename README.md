@@ -1,5 +1,5 @@
 <p align="center" dir="auto">
-<img src="https://github.com/easyrent-club/lucide-mui/assets/39721828/1f05c0a2-040f-4e82-a6db-c41741f88fcb)" width="200"  />
+<img src="https://github.com/easyrent-club/lucide-mui/assets/39721828/3b7a39c2-946e-481d-aa96-e6b01e23eba4" width="200"  />
 </p>
 
 # Lucide Icons for MUI
@@ -46,4 +46,4 @@ We aim to keep the version in line with the corresponding version of `lucide`
 Lucide-react provides React components, however these components don't integrate seamlessly with Material UI, requiring extra work to use them in place of material icons.
 
 ### What icons are available?
-All lucide icons are available, and this package will be updated whenever new icons are added to lucide. This package is not intended to add any additional or custom icons
+All lucide icons are available, and this package will be updated whenever new icons are added to lucide. This package is not intended to add any additional or custom icons.
