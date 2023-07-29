@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'package.json'
 
 jobs:
   build:
@@ -16,6 +18,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: yarn
       - run: yarn build
+      - run: yarn test
       - run: cd dist && yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
