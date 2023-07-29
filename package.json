@@ -10,21 +10,33 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/node": "^20.4.5",
+    "@vitest/ui": "^0.33.0",
     "cross-env": "^7.0.3",
+    "jsdom": "^22.1.0",
     "lucide": "0.263.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vite": "^4.4.7",
+    "vitest": "^0.33.0"
   },
   "scripts": {
     "generate": "ts-node --esm scripts/generateIcons.ts",
     "build": "yarn generate && rimraf dist && yarn build:esm && yarn build:cjs && yarn build:tsc && ts-node --esm scripts/copyFiles.ts",
     "build:esm": "cross-env BABEL_ENV=esmUnbundled babel src --extensions '.ts,.tsx' --out-dir 'dist/esm' --copy-files --no-copy-ignored",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions '.ts,.tsx' --out-dir 'dist/cjs'",
-    "build:tsc": "tsc --project tsconfig.prod.json"
+    "build:tsc": "tsc --project tsconfig.prod.json",
+    "test": "vitest"
   },
   "peerDependencies": {
     "@mui/material": "^5.14.2",
