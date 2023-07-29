@@ -1,3 +1,7 @@
+<p align="center" dir="auto">
+<img src="https://github.com/easyrent-club/lucide-mui/assets/39721828/1f05c0a2-040f-4e82-a6db-c41741f88fcb)" width="200"  />
+</p>
+
 # Lucide Icons for MUI
 This package provides [Lucide icons](https://lucide.dev/) as react components designed for use with [Material UI](https://mui.com/material-ui/), so that they can be used in the same way icons from `@mui/icons-material` are used.
 
