@@ -1,16 +1,22 @@
 name: Sync version with Lucide
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
 
 jobs:
   update-version:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+      - name: Checkout project
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      # Setup node
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
