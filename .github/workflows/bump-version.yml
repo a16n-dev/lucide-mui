@@ -1,7 +1,7 @@
 name: Sync version with Lucide
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened]
 
 jobs:
   update-version:
