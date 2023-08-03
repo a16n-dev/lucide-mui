@@ -11,7 +11,7 @@ You can use either npm or yarn:
 Using npm:
 
 ```bash
-npm install --save lucide-mui
+npm install lucide-mui
 ```
 Using yarn:
 
@@ -39,7 +39,10 @@ They also support all props of the [`SvgIcon` Material UI component](https://mui
 ```
 
 ## Versioning
-We aim to keep the version in line with the corresponding version of `lucide`
+The version is automatically kept in sync with `lucide`
+
+## Contributing
+All contributions welcome. Contributions/requests for new/updated icons should be directed to the lucide project: https://github.com/lucide-icons/lucide
 
 ## FAQs
 ### Whats the difference between this and lucide-react?
@@ -47,3 +50,4 @@ Lucide-react provides React components, however these components don't integrate
 
 ### What icons are available?
 All lucide icons are available, and this package will be updated whenever new icons are added to lucide. This package is not intended to add any additional or custom icons.
+

@@ -1,8 +1,16 @@
 {
   "name": "lucide-mui",
+  "description": "Lucide icons compatible with MUI",
   "version": "0.263.0",
   "packageManager": "yarn@3.6.1",
   "sideEffects": false,
+  "author": "Alexander Nicholson",
+  "homepage": "https://github.com/easyrent-club/lucide-mui#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easyrent-club/lucide-mui.git"
+  },
+  "license": "ISC",
   "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.21.0",
@@ -48,6 +56,7 @@
     "react",
     "icons",
     "material-ui",
-    "mui"
+    "mui",
+    "EasyRent"
   ]
 }
