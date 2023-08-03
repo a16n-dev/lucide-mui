@@ -1,7 +1,7 @@
 {
   "name": "lucide-mui",
   "version": "0.263.0",
-  "packageManager": "yarn@3.4.1",
+  "packageManager": "yarn@3.6.1",
   "sideEffects": false,
   "type": "module",
   "devDependencies": {
