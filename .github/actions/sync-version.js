@@ -5,10 +5,10 @@ let packageJson = fs.readFileSync('package.json');
 let packageObj = JSON.parse(packageJson);
 
 // Specify your dependency
-let dependency = "lucide";
+let dependency = 'lucide';
 
 // Get the version of the dependency
-let dependencyVersion = packageObj.dependencies[dependency];
+let dependencyVersion = packageObj.devDependencies[dependency];
 
 // Update the version of your package
 packageObj.version = dependencyVersion;
