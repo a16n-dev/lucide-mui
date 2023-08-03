@@ -6,11 +6,16 @@ on:
 jobs:
   update-version:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+      - name: Checkout project
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      # Setup node
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
@@ -20,6 +25,9 @@ jobs:
 
       - name: Sync version
         run: node .github/actions/sync-version.js
+
+      - name: Update the lockfile
+        run: yarn
 
       - name: Commit and push if it changed
         run: |
