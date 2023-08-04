@@ -1,4 +1,4 @@
-name: Release
+name: Release and Publish
 on:
   push:
     branches:
@@ -19,3 +19,23 @@ jobs:
       - name: Print release output
         if: ${{ steps.release.outputs.released == 'true' }}
         run: echo Release ID ${{ steps.release.outputs.release_id }}
+      - name: Setup node
+        if: steps.release.outputs.released == 'true'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        if: steps.release.outputs.released == 'true'
+        run: yarn
+      - name: Build project
+        if: steps.release.outputs.released == 'true'
+        run: yarn build
+      - name: Run tests
+        if: steps.release.outputs.released == 'true'
+        run: yarn test
+      - name: Publish to npm
+        if: steps.release.outputs.released == 'true'
+        run: cd dist && yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
