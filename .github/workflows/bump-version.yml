@@ -1,7 +1,7 @@
 name: Sync version with Lucide
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
 permissions:
   contents: write
 jobs:
