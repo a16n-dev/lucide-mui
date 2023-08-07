@@ -40,7 +40,7 @@ jobs:
       - name: Add label to mark version synced
         uses: actions/github-script@v6
         with:
-          token: ${{ secrets.TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
           script: |
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
