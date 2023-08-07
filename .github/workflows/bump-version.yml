@@ -38,14 +38,12 @@ jobs:
           git commit -am "Sync version with dependency" || exit 0
           git push
       - name: Add label to mark version synced
-        uses: actions/github-script@v5
+        uses: actions/github-script@v6
         with:
-          github-token: ${{secrets.TOKEN}}
           script: |
-            const { owner, repo, number: issue_number } = context.repo;
-            await github.issues.addLabels({
-              owner,
-              repo,
-              issue_number,
-              labels: ['version in sync']
-            });   
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["version in sync"]
+            })
