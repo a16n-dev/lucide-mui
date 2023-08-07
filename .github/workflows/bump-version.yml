@@ -2,7 +2,8 @@ name: Sync version with Lucide
 on:
   pull_request:
     types: [opened]
-
+permissions:
+  contents: write
 jobs:
   update-version:
     runs-on: ubuntu-latest
