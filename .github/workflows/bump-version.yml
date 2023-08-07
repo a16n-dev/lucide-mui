@@ -37,3 +37,15 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -am "Sync version with dependency" || exit 0
           git push
+      - name: Add label to mark version synced
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.TOKEN}}
+          script: |
+            const { owner, repo, number: issue_number } = context.repo;
+            await github.issues.addLabels({
+              owner,
+              repo,
+              issue_number,
+              labels: ['version in sync']
+            });   
