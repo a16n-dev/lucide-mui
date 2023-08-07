@@ -36,6 +36,6 @@ jobs:
         run: yarn test
       - name: Publish to npm
         if: steps.release.outputs.released == 'true'
-        run: yarn npm publish --access public
+        run: cd dist && touch yarn.lock && yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
