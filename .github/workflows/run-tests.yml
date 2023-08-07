@@ -3,7 +3,6 @@ on:
   pull_request:
     types:
       - labeled
-    branches: [ main ]
 
 jobs:
   test:
@@ -20,9 +19,3 @@ jobs:
       - run: yarn
       - run: yarn generate
       - run: yarn test
-
-name: Run tests
-on:
-  pull_request:
-    types:
-      - labeled
