@@ -1,8 +1,9 @@
 name: Sync version with Lucide
 on:
   pull_request:
-    types: [opened]
-
+    types: [opened, synchronize]
+permissions:
+  contents: write
 jobs:
   update-version:
     runs-on: ubuntu-latest
@@ -36,3 +37,14 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -am "Sync version with dependency" || exit 0
           git push
+      - name: Add label to mark version synced
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["version in sync"]
+            })

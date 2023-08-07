@@ -1,14 +1,16 @@
 name: Run tests
 on:
   pull_request:
-    types: [opened, synchronize]
-    branches: [ main ]
+    types:
+      - labeled
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout
+        if: github.event.label.name == 'version in sync' # Ensuring it's the "Needs Review" label
+        uses: actions/checkout@v3
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
