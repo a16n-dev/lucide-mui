@@ -32,11 +32,11 @@ Object.entries(icons).forEach(([iconName, iconContent]) => {
     const filename = `src/${ICON_PATH}/${iconName}.tsx`;
 
 
-    const fileContent = `import {SvgIcon} from "@mui/material";
+    const fileContent = `import {SvgIcon, SvgIconProps} from "@mui/material";
 /**
  *  [${iconName} on lucide.dev](https://lucide.dev/icons/${toKebabCase(iconName)})
  */    
-const ${iconName} = <SvgIcon>${iconDataToReact(iconContent)}</SvgIcon>;
+const ${iconName} = (props: SvgIconProps) => <SvgIcon {...props}>${iconDataToReact(iconContent)}</SvgIcon>;
     
 export default ${iconName};
 `
@@ -46,8 +46,8 @@ export default ${iconName};
 
 // generate test file
 const testFile = `import '@testing-library/jest-dom'
-import {render} from "@testing-library/react";
-import {screen} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
+import { expect, test } from 'vitest'
 ${Object.entries(icons).map(([iconName]) => `import ${iconName} from "./${ICON_PATH}/${iconName}";`).join("\n")}
 
 ${Object.entries(icons).map(([iconName]) => `test('${iconName} renders without error', () => {

@@ -8,6 +8,8 @@ jobs:
   build:
     name: Release
     runs-on: ubuntu-latest
+    outputs:
+      released: ${{ steps.release.outputs.released }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -19,23 +21,76 @@ jobs:
       - name: Print release output
         if: ${{ steps.release.outputs.released == 'true' }}
         run: echo Release ID ${{ steps.release.outputs.release_id }}
+
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup node
-        if: steps.release.outputs.released == 'true'
         uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
-        if: steps.release.outputs.released == 'true'
         run: yarn
+
       - name: Build project
-        if: steps.release.outputs.released == 'true'
         run: yarn build
+
       - name: Run tests
-        if: steps.release.outputs.released == 'true'
         run: yarn test
+
       - name: Publish to npm
-        if: steps.release.outputs.released == 'true'
         run: cd dist && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+#  create-release:
+#    name: Create Release
+#    runs-on: ubuntu-latest
+#    outputs:
+#      released: ${{ steps.release.outputs.released }}
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#        with:
+#          fetch-depth: 0
+#      - name: Automatic GitHub Release
+#        uses: justincy/github-action-npm-release@2.0.2
+#        id: release
+#      - name: Print release output
+#        if: ${{ steps.release.outputs.released == 'true' }}
+#        run: echo Release ID ${{ steps.release.outputs.release_id }}
+#
+#  publish-package:
+#    name: Publish to NPM
+#    needs: [create-release]
+#    if: needs.create-release.outputs.released == 'true'
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout project
+#        uses: actions/checkout@v3
+#        with:
+#          ref: ${{ github.head_ref }}
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Setup node
+#        uses: actions/setup-node@v3
+#        with:
+#          cache: 'yarn'
+#          node-version: 16
+#          registry-url: https://registry.npmjs.org
+#
+#      - name: Install dependencies
+#        run: yarn
+#
+#      - name: Build project
+#        run: yarn build
+#
+#      - name: Run tests
+#        run: yarn test
+#
+#      - name: Publish to npm
+#        run: npm publish
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
