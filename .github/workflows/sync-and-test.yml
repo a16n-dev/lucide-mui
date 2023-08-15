@@ -2,6 +2,8 @@ name: Sync and Test
 on:
   pull_request:
     types: [opened, synchronize]
+  workflow_dispatch:
+
 permissions:
   contents: write
 jobs:
