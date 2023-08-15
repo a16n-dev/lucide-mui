@@ -32,11 +32,11 @@ Object.entries(icons).forEach(([iconName, iconContent]) => {
     const filename = `src/${ICON_PATH}/${iconName}.tsx`;
 
 
-    const fileContent = `import {createSvgIcon} from "@mui/material";
+    const fileContent = `import {SvgIcon} from "@mui/material";
 /**
  *  [${iconName} on lucide.dev](https://lucide.dev/icons/${toKebabCase(iconName)})
  */    
-const ${iconName} = createSvgIcon(${iconDataToReact(iconContent)}, "${iconName}");
+const ${iconName} = <SvgIcon>${iconDataToReact(iconContent)}</SvgIcon>;
     
 export default ${iconName};
 `
