@@ -1,7 +1,7 @@
 {
   "name": "lucide-mui",
   "description": "Lucide icons compatible with MUI",
-  "version": "0.268.0",
+  "version": "^0.309.0",
   "packageManager": "yarn@3.6.1",
   "sideEffects": false,
   "author": "Alexander Nicholson",
