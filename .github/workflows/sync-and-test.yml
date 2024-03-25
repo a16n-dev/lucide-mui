@@ -43,4 +43,7 @@ jobs:
 
 # Trigger the test workflow
       - name: Run test workflow
-        run: gh workflow run "Run Tests"
+        run: gh workflow run run-tests.yml -f ref=$GITHUB_HEAD_REF
+        env:
+          GITHUB_HEAD_REF: ${{ github.head_ref }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
