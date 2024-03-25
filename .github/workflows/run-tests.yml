@@ -1,4 +1,4 @@
-name: Sync and Test
+name: Run Tests
 on:
   pull_request:
     types: [synchronize]

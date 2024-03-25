@@ -1,4 +1,4 @@
-name: Sync and Test
+name: Sync Lucide Version
 on:
   pull_request:
     types: [opened]
