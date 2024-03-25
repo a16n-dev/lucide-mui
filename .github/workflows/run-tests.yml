@@ -2,6 +2,7 @@ name: Run Tests
 on:
   pull_request:
     types: [synchronize]
+  workflow_dispatch:
 
 jobs:
   run-tests:
