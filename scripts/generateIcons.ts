@@ -28,8 +28,11 @@ rmSync(`src/${ICON_PATH}`, {recursive: true, force: true});
 mkdirSync(`src/${ICON_PATH}`, {recursive: true});
 
 Object.entries(icons).forEach(([iconName, iconContent]) => {
+
+  const iconNameLowerCase = toKebabCase(iconName);
+
     // filename is icon.ts
-    const filename = `src/${ICON_PATH}/${iconName}.tsx`;
+    const filename = `src/${ICON_PATH}/${iconNameLowerCase}.tsx`;
 
 
     const fileContent = `import {SvgIcon, SvgIconProps} from "@mui/material";
@@ -48,7 +51,7 @@ export default ${iconName};
 const testFile = `import '@testing-library/jest-dom'
 import {render, screen} from "@testing-library/react";
 import { expect, test } from 'vitest'
-${Object.entries(icons).map(([iconName]) => `import ${iconName} from "./${ICON_PATH}/${iconName}";`).join("\n")}
+${Object.entries(icons).map(([iconName]) => `import ${iconName} from "./${ICON_PATH}/${toKebabCase(iconName)}";`).join("\n")}
 
 ${Object.entries(icons).map(([iconName]) => `test('${iconName} renders without error', () => {
     render(<${iconName} data-testid={"svg-element"}/>)
@@ -60,6 +63,6 @@ ${Object.entries(icons).map(([iconName]) => `test('${iconName} renders without e
 writeFileSync(`src/icons.test.tsx`, testFile);
 
 // generate barrel file
-const barrelExports = Object.entries(icons).map(([iconName]) => `export {default as ${iconName}} from './icons/${iconName}';`).join("\n");
+const barrelExports = Object.entries(icons).map(([iconName]) => `export {default as ${iconName}} from './icons/${toKebabCase(iconName)}';`).join("\n");
 
 writeFileSync(`src/index.ts`, barrelExports);
