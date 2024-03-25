@@ -1,9 +1,7 @@
 name: Sync Lucide Version
 on:
   pull_request:
-    types: [opened]
-  workflow_dispatch:
-
+    types: [opened, synchronize]
 
 permissions:
   contents: write

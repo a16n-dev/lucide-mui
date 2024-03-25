@@ -4204,7 +4204,7 @@ __metadata:
     "@vitest/ui": ^0.34.2
     cross-env: ^7.0.3
     jsdom: ^22.1.0
-    lucide: ^0.363.0
+    lucide: 0.363.0
     react: ^18.2.0
     react-dom: ^18.2.0
     rimraf: ^5.0.1
@@ -4220,7 +4220,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lucide@npm:^0.363.0":
+"lucide@npm:0.363.0":
   version: 0.363.0
   resolution: "lucide@npm:0.363.0"
   checksum: 48fd0465819b7386dc78eebdf45aa6bf7cfa59ae22bf2dc6f10c5bfe025d95678c17fe5bb1cfd49d19f178daf271c6e3c67d3de5036e3c750cd6d1da0cf03697
