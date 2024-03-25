@@ -46,4 +46,4 @@ jobs:
         run: gh workflow run run-tests.yml -f ref=$GITHUB_HEAD_REF
         env:
           GITHUB_HEAD_REF: ${{ github.head_ref }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ADMIN_TOKEN }}
