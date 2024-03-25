@@ -2413,17 +2413,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/utils@npm:0.34.2":
-  version: 0.34.2
-  resolution: "@vitest/utils@npm:0.34.2"
-  dependencies:
-    diff-sequences: ^29.4.3
-    loupe: ^2.3.6
-    pretty-format: ^29.5.0
-  checksum: 55081528a475413759bf752ec084ccfc013e1f549c4f9523535034c86aab6d2f8711ac44d462817d01d3ccb1608f9150809a94896a681be8602d78554b162037
-  languageName: node
-  linkType: hard
-
 "abab@npm:^2.0.6":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
