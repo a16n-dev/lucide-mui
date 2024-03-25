@@ -2,6 +2,8 @@ name: Sync Lucide Version
 on:
   pull_request:
     types: [opened]
+  workflow_dispatch:
+
 
 permissions:
   contents: write
@@ -38,3 +40,10 @@ jobs:
           git config --local user.name "Kiki"
           git commit -m "Sync version with dependency" || exit 0
           git push
+
+# Trigger the test workflow
+      - name: Run test workflow
+        run: gh workflow run run-tests.yml -f ref=$GITHUB_HEAD_REF
+        env:
+          GITHUB_HEAD_REF: ${{ github.head_ref }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
