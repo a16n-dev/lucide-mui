@@ -42,11 +42,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ADMIN_GH_TOKEN }}
-          branch: ${{ github.ref }}
-
-# Trigger the test workflow
-#      - name: Run test workflow
-#        run: gh workflow run run-tests.yml -f ref=$GITHUB_HEAD_REF
-#        env:
-#          GITHUB_HEAD_REF: ${{ github.head_ref }}
-#          GITHUB_TOKEN: ${{ secrets.ADMIN_GH_TOKEN }}
+          branch: ${{ github.head_ref }}
