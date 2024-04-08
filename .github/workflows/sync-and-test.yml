@@ -36,9 +36,14 @@ jobs:
           git diff
           git config --local user.email "admin@kiki.club"
           git config --local user.name "Kiki"
+          git remote set-url origin "https://
           git add .
           git commit -m "Sync version with dependency" || exit 0
-          git push
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ADMIN_GH_TOKEN }}
+          branch: ${{ github.ref }}
 
 # Trigger the test workflow
 #      - name: Run test workflow
