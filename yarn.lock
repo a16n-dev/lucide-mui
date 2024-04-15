@@ -2758,10 +2758,10 @@ __metadata:
   linkType: hard
 
 "@vitest/ui@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@vitest/ui@npm:1.4.0"
+  version: 1.5.0
+  resolution: "@vitest/ui@npm:1.5.0"
   dependencies:
-    "@vitest/utils": 1.4.0
+    "@vitest/utils": 1.5.0
     fast-glob: ^3.3.2
     fflate: ^0.8.1
     flatted: ^3.2.9
@@ -2769,8 +2769,8 @@ __metadata:
     picocolors: ^1.0.0
     sirv: ^2.0.4
   peerDependencies:
-    vitest: 1.4.0
-  checksum: 5a508fd80fcdf87acf4697ae8836cf4dcdd5300fd1574a400a62f5242a6bb4028b3002d60db20f84c3e3e4b4ae110b33194c31219330fffe205e5d9fbf1c65c8
+    vitest: 1.5.0
+  checksum: b0e738107bcb04d92831a438edf7439205d9979551985928806ff36ea900de8f4196f11c7bf67439444fabef5c8d65c5f3a09a1eca3f93035ce119a779bc9e67
   languageName: node
   linkType: hard
 
@@ -2783,6 +2783,18 @@ __metadata:
     loupe: ^2.3.7
     pretty-format: ^29.7.0
   checksum: 5b54e36e5ad236da1da548d31e3b080d1798179f787cfb9ac512d03e59401f8baaa96fec15b6de6b969ee0e057660289109a69a39bd988e89aa72625b5f78484
+  languageName: node
+  linkType: hard
+
+"@vitest/utils@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@vitest/utils@npm:1.5.0"
+  dependencies:
+    diff-sequences: ^29.6.3
+    estree-walker: ^3.0.3
+    loupe: ^2.3.7
+    pretty-format: ^29.7.0
+  checksum: 07a59b62b4d8110e6af6a709da2c0bb80bf60944186b544b02dfacc08bc26af36f4ec008e1ce7a0df4a8c27fd278938582241ccbd45dd7f4979cf5fec1f9f549
   languageName: node
   linkType: hard
 
