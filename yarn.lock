@@ -2849,10 +2849,10 @@ __metadata:
   linkType: hard
 
 "@vitest/ui@npm:^1.4.0":
-  version: 1.5.2
-  resolution: "@vitest/ui@npm:1.5.2"
+  version: 1.6.0
+  resolution: "@vitest/ui@npm:1.6.0"
   dependencies:
-    "@vitest/utils": 1.5.2
+    "@vitest/utils": 1.6.0
     fast-glob: ^3.3.2
     fflate: ^0.8.1
     flatted: ^3.2.9
@@ -2860,20 +2860,8 @@ __metadata:
     picocolors: ^1.0.0
     sirv: ^2.0.4
   peerDependencies:
-    vitest: 1.5.2
-  checksum: 74f7112e342c1b315f8460205ab075153a6ed85abe7aaacf6991b54fdc01e8cee116b51e23d8c0be13697d3c9f817681a9cfcdb1a02dd4d3742519bc10f25627
-  languageName: node
-  linkType: hard
-
-"@vitest/utils@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@vitest/utils@npm:1.5.2"
-  dependencies:
-    diff-sequences: ^29.6.3
-    estree-walker: ^3.0.3
-    loupe: ^2.3.7
-    pretty-format: ^29.7.0
-  checksum: 9c9ead817c13d15fa41f441330df1c8d44df4cd5221502274aaaf3510fa0740b5c5be3bb2fcf3ffc717d35e66cd4e2b8d057495e605ed1cd4693762a9f06bb23
+    vitest: 1.6.0
+  checksum: 4d542c12d7e533d22dc3e4cacd740a4acf54e0a96a5583e6558095b9167e1969d95894626310b9f5cd71bea55fd934081781ebfc2435fad2f331ff98e0affe61
   languageName: node
   linkType: hard
 
