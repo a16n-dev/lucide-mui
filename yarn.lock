@@ -2723,20 +2723,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/ui@npm:^1.4.0":
-  version: 1.6.0
-  resolution: "@vitest/ui@npm:1.6.0"
+"@vitest/ui@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@vitest/ui@npm:2.0.1"
   dependencies:
-    "@vitest/utils": 1.6.0
+    "@vitest/utils": 2.0.1
     fast-glob: ^3.3.2
-    fflate: ^0.8.1
-    flatted: ^3.2.9
-    pathe: ^1.1.1
-    picocolors: ^1.0.0
+    fflate: ^0.8.2
+    flatted: ^3.3.1
+    pathe: ^1.1.2
+    picocolors: ^1.0.1
     sirv: ^2.0.4
   peerDependencies:
-    vitest: 1.6.0
-  checksum: 4d542c12d7e533d22dc3e4cacd740a4acf54e0a96a5583e6558095b9167e1969d95894626310b9f5cd71bea55fd934081781ebfc2435fad2f331ff98e0affe61
+    vitest: 2.0.1
+  checksum: 30aa37e86ccf0ddf5836bf72920b647000c69fe0ec49389a62048ecccc76d242c2e1d60178002367b9d90bd786ae5b206b460f9ac788ea4675e82c76e079f840
   languageName: node
   linkType: hard
 
@@ -2749,6 +2749,18 @@ __metadata:
     loupe: ^2.3.7
     pretty-format: ^29.7.0
   checksum: a4749533a48e7e4bbc8eafee0fee0e9a0d4eaa4910fbdb490d34e16f8ebcce59a2b38529b9e6b4578e3b4510ea67b29384c93165712b0a19f2e71946922d2c56
+  languageName: node
+  linkType: hard
+
+"@vitest/utils@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@vitest/utils@npm:2.0.1"
+  dependencies:
+    diff-sequences: ^29.6.3
+    estree-walker: ^3.0.3
+    loupe: ^3.1.1
+    pretty-format: ^29.7.0
+  checksum: 8b38b79fdd3c7e574aba058790a757404c01fba0f456e2492bd01c16052abb83cc90424ea7f07745de255297491aedbe07aca17b2a2893cb5f8518fdd0fbb545
   languageName: node
   linkType: hard
 
@@ -3710,7 +3722,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fflate@npm:^0.8.1":
+"fflate@npm:^0.8.2":
   version: 0.8.2
   resolution: "fflate@npm:0.8.2"
   checksum: 29470337b85d3831826758e78f370e15cda3169c5cd4477c9b5eea2402261a74b2975bae816afabe1c15d21d98591e0d30a574f7103aa117bff60756fa3035d4
@@ -3733,7 +3745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flatted@npm:^3.2.9":
+"flatted@npm:^3.3.1":
   version: 3.3.1
   resolution: "flatted@npm:3.3.1"
   checksum: 85ae7181650bb728c221e7644cbc9f4bf28bc556f2fc89bb21266962bdf0ce1029cc7acc44bb646cd469d9baac7c317f64e841c4c4c00516afa97320cdac7f94
@@ -4376,6 +4388,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"loupe@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "loupe@npm:3.1.1"
+  dependencies:
+    get-func-name: ^2.0.1
+  checksum: c7efa6bc6d71f25ca03eb13c9a069e35ed86799e308ca27a7a3eff8cdf9500e7c22d1f2411468d154a8e960e91e5e685e0c6c83e96db748f177c1adf30811153
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -4426,7 +4447,7 @@ __metadata:
     "@testing-library/user-event": ^14.4.3
     "@types/node": ^20.4.9
     "@types/react-dom": ^18.3.0
-    "@vitest/ui": ^1.4.0
+    "@vitest/ui": ^2.0.1
     cross-env: ^7.0.3
     jsdom: ^24.0.0
     lucide: 0.399.0
