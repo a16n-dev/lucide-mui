@@ -2803,6 +2803,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vitest/pretty-format@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@vitest/pretty-format@npm:2.0.3"
+  dependencies:
+    tinyrainbow: ^1.2.0
+  checksum: 9ede84fd2ea45a4e0796f3c8390a28ae1548072333706b05b6ed6285881ff05a29a0980479c6c73d6012e8db340495f3e5f5a9e8cb605ee847b7796f10537037
+  languageName: node
+  linkType: hard
+
 "@vitest/runner@npm:1.6.0":
   version: 1.6.0
   resolution: "@vitest/runner@npm:1.6.0"
@@ -2835,19 +2844,19 @@ __metadata:
   linkType: hard
 
 "@vitest/ui@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@vitest/ui@npm:2.0.1"
+  version: 2.0.3
+  resolution: "@vitest/ui@npm:2.0.3"
   dependencies:
-    "@vitest/utils": 2.0.1
+    "@vitest/utils": 2.0.3
     fast-glob: ^3.3.2
     fflate: ^0.8.2
     flatted: ^3.3.1
     pathe: ^1.1.2
-    picocolors: ^1.0.1
     sirv: ^2.0.4
+    tinyrainbow: ^1.2.0
   peerDependencies:
-    vitest: 2.0.1
-  checksum: 30aa37e86ccf0ddf5836bf72920b647000c69fe0ec49389a62048ecccc76d242c2e1d60178002367b9d90bd786ae5b206b460f9ac788ea4675e82c76e079f840
+    vitest: 2.0.3
+  checksum: 599b684f2a8ee7a6cd3434971baafd8850c9897a75a06f31d0165a3a912c06f6ccae2fdac7de007bda797b31c3348c5f4a11ea0f2c2c06b0c88b5cdef01020fa
   languageName: node
   linkType: hard
 
@@ -2863,15 +2872,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/utils@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@vitest/utils@npm:2.0.1"
+"@vitest/utils@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@vitest/utils@npm:2.0.3"
   dependencies:
-    diff-sequences: ^29.6.3
+    "@vitest/pretty-format": 2.0.3
     estree-walker: ^3.0.3
     loupe: ^3.1.1
-    pretty-format: ^29.7.0
-  checksum: 8b38b79fdd3c7e574aba058790a757404c01fba0f456e2492bd01c16052abb83cc90424ea7f07745de255297491aedbe07aca17b2a2893cb5f8518fdd0fbb545
+    tinyrainbow: ^1.2.0
+  checksum: a856dd4b8b3951eb88f42c5dc8cd112b27a2f2130f74805aa2ddc99f0da6c249c8e78315a26450ea1763f8e78b1739d3d6e6ac4aaaa6fa73c717bfcb9cb11a66
   languageName: node
   linkType: hard
 
@@ -5891,6 +5900,13 @@ __metadata:
   version: 0.8.4
   resolution: "tinypool@npm:0.8.4"
   checksum: d40c40e062d5eeae85dadc39294dde6bc7b9a7a7cf0c972acbbe5a2b42491dfd4c48381c1e48bbe02aff4890e63de73d115b2e7de2ce4c81356aa5e654a43caf
+  languageName: node
+  linkType: hard
+
+"tinyrainbow@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "tinyrainbow@npm:1.2.0"
+  checksum: d1e2cb5400032c0092be00e4a3da5450bea8b4fad58bfb5d3c58ca37ff5c5e252f7fcfb9af247914854af79c46014add9d1042fe044358c305a129ed55c8be35
   languageName: node
   linkType: hard
 
