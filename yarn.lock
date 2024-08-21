@@ -5238,7 +5238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.40":
+"postcss@npm:^8.4.41":
   version: 8.4.41
   resolution: "postcss@npm:8.4.41"
   dependencies:
@@ -6212,12 +6212,12 @@ __metadata:
   linkType: hard
 
 "vite@npm:^5.0.0, vite@npm:^5.2.6":
-  version: 5.4.0
-  resolution: "vite@npm:5.4.0"
+  version: 5.4.1
+  resolution: "vite@npm:5.4.1"
   dependencies:
     esbuild: ^0.21.3
     fsevents: ~2.3.3
-    postcss: ^8.4.40
+    postcss: ^8.4.41
     rollup: ^4.13.0
   peerDependencies:
     "@types/node": ^18.0.0 || >=20.0.0
@@ -6250,7 +6250,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: e2a7d37b9cc92b14d0070f5c229c46365c82af45860db2424d0ec547c3f00d66f4d1d969fea60f22b143994bf60d04d4a364c87b3ff79bd7c94568e788b1d932
+  checksum: 5bbb9e855fdbcb170f0d02b78e5c1e8f68e2d2010df6dd74b105bbcef96e91d89871063cb9afafb263e8e0bd69d7b6c4eeadd1abec63bd0938ab7b2b56e7e4dd
   languageName: node
   linkType: hard
 
