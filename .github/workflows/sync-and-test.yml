@@ -35,8 +35,8 @@ jobs:
       - name: Commit and push if it changed
         run: |
           git diff
-          git config --local user.email "admin@kiki.club"
-          git config --local user.name "Kiki"
+          git config --local user.email "alex@a16n.dev"
+          git config --local user.name "A16N"
           git add .
           git commit -m "Sync version with dependency" || exit 0
       - name: Push changes
