@@ -4804,7 +4804,7 @@ __metadata:
     "@vitest/ui": ^2.0.1
     cross-env: ^7.0.3
     jsdom: ^25.0.0
-    lucide: 0.439.0
+    lucide: 0.445.0
     react: ^18.2.0
     react-dom: ^18.2.0
     rimraf: ^6.0.1
@@ -4820,10 +4820,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lucide@npm:0.439.0":
-  version: 0.439.0
-  resolution: "lucide@npm:0.439.0"
-  checksum: e6d4a99693d4443193009957caec2cc8bc6c0705e85b3e18e9aa1594126924626601d7e96b7baf0584fa6e96431810470c102cfbd7e1f9d18335ad0972748378
+"lucide@npm:0.445.0":
+  version: 0.445.0
+  resolution: "lucide@npm:0.445.0"
+  checksum: fe0d905aceb12c38def848af7fa9b829a81e971450442a3dfaba84ea0adb1e2228da319efa7603c29949994a19ae8cf83ebb6c1cfd14c602101a293c4d1594a6
   languageName: node
   linkType: hard
 
