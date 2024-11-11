@@ -2690,15 +2690,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/pretty-format@npm:2.1.3":
-  version: 2.1.3
-  resolution: "@vitest/pretty-format@npm:2.1.3"
-  dependencies:
-    tinyrainbow: ^1.2.0
-  checksum: ff4aa144a49c0ee579bfae940745b70a0ca3c504f52c23f1e8f5c0642824785232f844040d31b48eea71b5a80519809810359a75d29186ab40341174c50a4a0d
-  languageName: node
-  linkType: hard
-
 "@vitest/pretty-format@npm:2.1.4, @vitest/pretty-format@npm:^2.1.4":
   version: 2.1.4
   resolution: "@vitest/pretty-format@npm:2.1.4"
@@ -2739,30 +2730,19 @@ __metadata:
   linkType: hard
 
 "@vitest/ui@npm:^2.0.1":
-  version: 2.1.3
-  resolution: "@vitest/ui@npm:2.1.3"
+  version: 2.1.4
+  resolution: "@vitest/ui@npm:2.1.4"
   dependencies:
-    "@vitest/utils": 2.1.3
+    "@vitest/utils": 2.1.4
     fflate: ^0.8.2
     flatted: ^3.3.1
     pathe: ^1.1.2
-    sirv: ^2.0.4
-    tinyglobby: ^0.2.6
+    sirv: ^3.0.0
+    tinyglobby: ^0.2.9
     tinyrainbow: ^1.2.0
   peerDependencies:
-    vitest: 2.1.3
-  checksum: 992639327210b70fce9f6ab6a0ea733afabf6da7ff0ebf12d3c2eaa81eccce456c9786801fa597779bf57197e4d52dfc01f5ac9f514fae9753bd41c3b3383522
-  languageName: node
-  linkType: hard
-
-"@vitest/utils@npm:2.1.3":
-  version: 2.1.3
-  resolution: "@vitest/utils@npm:2.1.3"
-  dependencies:
-    "@vitest/pretty-format": 2.1.3
-    loupe: ^3.1.1
-    tinyrainbow: ^1.2.0
-  checksum: 0c1e262600bc329fab43bb19d575326a6d38175c2bdc345bc5326b81cf34303f22a1b67a0197dc6a935c3019e2f21c4da52a49c609967bea9cb4790a44a347ce
+    vitest: 2.1.4
+  checksum: 6bb8643c914680945d94104e77474cc5c3bae17badfa48924aef0d792f5dcd4a11788a68f4de817f35d9268a3ddbf7435e2f0e90b59195f198a5dfe12a409f1d
   languageName: node
   linkType: hard
 
@@ -3712,15 +3692,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fdir@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "fdir@npm:6.3.0"
+"fdir@npm:^6.4.2":
+  version: 6.4.2
+  resolution: "fdir@npm:6.4.2"
   peerDependencies:
     picomatch: ^3 || ^4
   peerDependenciesMeta:
     picomatch:
       optional: true
-  checksum: c0fe6ddd4aa0a315a55401d468974b582b1880908c8f7b1b1c40db4cd2feb2c04402d2fbdbd6ad049f6261e0d7cd6e629cc5ae678f8883f245ebc1f94b6ff9e6
+  checksum: 517ad31c495f1c0778238eef574a7818788efaaf2ce1969ffa18c70793e2951a9763dfa2e6720b8fcef615e602a3cbb47f9b8aea9da0b02147579ab36043f22f
   languageName: node
   linkType: hard
 
@@ -4321,7 +4301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loupe@npm:^3.1.0, loupe@npm:^3.1.1":
+"loupe@npm:^3.1.0":
   version: 3.1.1
   resolution: "loupe@npm:3.1.1"
   dependencies:
@@ -5376,14 +5356,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sirv@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "sirv@npm:2.0.4"
+"sirv@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "sirv@npm:3.0.0"
   dependencies:
     "@polka/url": ^1.0.0-next.24
     mrmime: ^2.0.0
     totalist: ^3.0.0
-  checksum: 6853384a51d6ee9377dd657e2b257e0e98b29abbfbfa6333e105197f0f100c8c56a4520b47028b04ab1833cf2312526206f38fcd4f891c6df453f40da1a15a57
+  checksum: 04b8036cab13971737dbb12b184a88f3d9aba955eed5600d27250f3dfd0a0ad1ff7a343537511b54d4fda36f629e2ffe25813f900d84cf4e3c08a7292f458af1
   languageName: node
   linkType: hard
 
@@ -5584,13 +5564,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.6":
-  version: 0.2.6
-  resolution: "tinyglobby@npm:0.2.6"
+"tinyglobby@npm:^0.2.9":
+  version: 0.2.10
+  resolution: "tinyglobby@npm:0.2.10"
   dependencies:
-    fdir: ^6.3.0
+    fdir: ^6.4.2
     picomatch: ^4.0.2
-  checksum: 5a1844369f1c11b54b4405c267a968b87ae08a6b68dca9c00a99bc5d03e0396901c04bb5e7e78675b5b70d3d93c65707ba0340845e7bba54f66c9fea29280224
+  checksum: 7e2ffe262ebc149036bdef37c56b32d02d52cf09efa7d43dbdab2ea3c12844a4da881058835ce4c74d1891190e5ad5ec5133560a11ec8314849b68ad0d99d3f4
   languageName: node
   linkType: hard
 
