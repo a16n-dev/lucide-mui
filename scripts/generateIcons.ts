@@ -63,6 +63,6 @@ ${Object.entries(icons).map(([iconName]) => `test('${iconName} renders without e
 writeFileSync(`src/icons.test.tsx`, testFile);
 
 // generate barrel file
-const barrelExports = Object.entries(icons).map(([iconName]) => `export {default as ${iconName}} from './icons/${toKebabCase(iconName)}';`).join("\n");
+const barrelExports = Object.entries(icons).map(([iconName]) => `export {default as ${iconName}, default as ${iconName}Icon} from './icons/${toKebabCase(iconName)}';`).join("\n");
 
 writeFileSync(`src/index.ts`, barrelExports);
