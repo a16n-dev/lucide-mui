@@ -3,6 +3,12 @@
 </p>
 
 # Lucide Icons for MUI
+
+[![npm](https://img.shields.io/npm/v/lucide-mui?color=blue)](https://www.npmjs.com/package/lucide-mui)
+[![Types](https://img.shields.io/npm/types/lucide-mui.svg)](https://www.npmjs.com/package/lucide-mui)
+[![Downloads](https://img.shields.io/npm/dt/lucide-mui.svg)](https://www.npmjs.com/package/lucide-mui)
+[![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+
 This package provides [Lucide icons](https://lucide.dev/) as React components designed for use with [Material UI](https://mui.com/material-ui/), so that they can be used in the same way icons from `@mui/icons-material` are used.
 
 ## Installation
