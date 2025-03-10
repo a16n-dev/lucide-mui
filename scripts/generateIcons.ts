@@ -1,22 +1,30 @@
-import {icons} from "lucide";
+import {icons, IconNode} from "lucide";
 import {writeFileSync, mkdirSync, rmSync} from "fs";
-
-type SVGProps = Record<string, string | number>;
-type IconNodeChild = readonly [tag: string, attrs: SVGProps];
-type IconNode = readonly [tag: string, attrs: SVGProps, children?: IconNodeChild[]];
 
 const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 const toCamelCase = (string: string) => string.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 
-const iconDataToReact = (icon: IconNode | IconNodeChild): string => {
-    const props = Object.entries(icon[1]).map(([prop, value])=> `${toCamelCase(prop)}={${JSON.stringify(value)}}`).join(" ")
-    if(icon[2] === undefined){
-        return `<${icon[0]} ${props}/>`
-    } else {
-        return `<${icon[0]} ${props}>${icon[2].map(iconDataToReact).join("")}</${icon[0]}>`
-    }
+const objectToProps = (obj: Record<string, any>) => Object.entries(obj).map(([prop, value]) => `${toCamelCase(prop)}={${JSON.stringify(value)}}`).join(" ")
 
+const DEFAULT_SVG_PROPS = {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+}
+
+
+const iconDataToReact = (icon: IconNode): string => {
+
+    return `<svg ${objectToProps(DEFAULT_SVG_PROPS)}>${icon.map(([tag, attrs]) => (
+        `<${tag} ${objectToProps(attrs)}/>`
+    )).join('\n')}</svg>`
 }
 
 // The path to generate icons to
@@ -29,7 +37,7 @@ mkdirSync(`src/${ICON_PATH}`, {recursive: true});
 
 Object.entries(icons).forEach(([iconName, iconContent]) => {
 
-  const iconNameLowerCase = toKebabCase(iconName);
+    const iconNameLowerCase = toKebabCase(iconName);
 
     // filename is icon.ts
     const filename = `src/${ICON_PATH}/${iconNameLowerCase}.tsx`;
