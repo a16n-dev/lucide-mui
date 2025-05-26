@@ -2656,6 +2656,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^19.1.5":
+  version: 19.1.5
+  resolution: "@types/react@npm:19.1.5"
+  dependencies:
+    csstype: "npm:^3.0.2"
+  checksum: 10/ea007c6c3a7afc42421d2cc260446de9e949513cb1261e0e5cf856108afe6e8d53ed51dc26c522a364e4927450092deea68b0423c68f3a22c26dae3fac1363a5
+  languageName: node
+  linkType: hard
+
 "@vitest/expect@npm:3.1.1":
   version: 3.1.1
   resolution: "@vitest/expect@npm:3.1.1"
@@ -4436,6 +4445,7 @@ __metadata:
     "@testing-library/react": "npm:^16.0.0"
     "@testing-library/user-event": "npm:^14.4.3"
     "@types/node": "npm:^22.4.1"
+    "@types/react": "npm:^19.1.5"
     "@types/react-dom": "npm:^19.1.0"
     "@vitest/ui": "npm:^3.0.5"
     cross-env: "npm:^7.0.3"
