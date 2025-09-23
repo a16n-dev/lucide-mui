@@ -59,7 +59,7 @@ jobs:
           echo "Updating to version $LATEST_VERSION"
 
           # Update all lucide dependencies to the latest version
-          yarn add -D lucide@$LATEST_VERSION lucide-react@$LATEST_VERSION lucide-react-native@$LATEST_VERSION
+          yarn add -D lucide@$LATEST_VERSION
 
           # Update package.json version to match lucide version
           node -e "
