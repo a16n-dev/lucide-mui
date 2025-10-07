@@ -1,7 +1,7 @@
 {
   "name": "lucide-mui",
   "description": "Lucide icons compatible with MUI",
-  "version": "0.544.0",
+  "version": "0.545.0",
   "packageManager": "yarn@4.5.1",
   "sideEffects": false,
   "author": "Alexander Nicholson",
@@ -31,7 +31,7 @@
     "@vitest/ui": "^3.0.5",
     "cross-env": "^7.0.3",
     "jsdom": "^26.0.0",
-    "lucide": "0.544.0",
+    "lucide": "0.545.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "rimraf": "^6.0.1",
