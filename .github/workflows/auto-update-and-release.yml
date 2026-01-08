@@ -117,8 +117,8 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: yarn
@@ -133,4 +133,5 @@ jobs:
         run: yarn build
 
       - name: Publish to npm with provenance
-        run: cd dist && npm publish --provenance --access public
+        working-directory: dist
+        run: npm publish --access public
