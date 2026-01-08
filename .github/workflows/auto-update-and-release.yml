@@ -132,7 +132,5 @@ jobs:
       - name: Build project
         run: yarn build
 
-      - name: Publish to npm
-        run: cd dist && npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm with provenance
+        run: cd dist && npm publish --provenance --access public
